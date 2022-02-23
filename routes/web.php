@@ -15,23 +15,27 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
-    echo "Hi! Selamat Datang di Website Laravel";
-});
+// Route::get('/', function () {
+//     echo "Hi! Selamat Datang di Website Laravel";
+// });
 
-Route::get('/about', function () {
-    echo ("Nim   : 2041720223 <br>"); 
-    echo ("Nama  : Rahma Nurwakhidatul Hasanah <br>"); 
-    echo ("Kelas : TI-2G");
-});
+// Route::get('/about', function () {
+//     echo ("Nim   : 2041720223 <br>"); 
+//     echo ("Nama  : Rahma Nurwakhidatul Hasanah <br>"); 
+//     echo ("Kelas : TI-2G");
+// });
 
-Route::get('/article/{id}', function ($id= '1') {
-    echo ("Ini adalah Halaman Artikel dengan ID " .$id);
-});
+// Route::get('/article/{id}', function ($id= '1') {
+//     echo ("Ini adalah Halaman Artikel dengan ID " .$id);
+// });
 
-Route::get('/article/{id}', function ($id= '2') {
-    echo ("Ini adalah Halaman Artikel dengan ID ".$id);
-});
+// Route::get('/article/{id}', function ($id= '2') {
+//     echo ("Ini adalah Halaman Artikel dengan ID ".$id);
+// });
+
+Route::get('/', [PageController::class, 'index']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/articles/{id}', [PageController::class, 'articles']);
 
 
 
