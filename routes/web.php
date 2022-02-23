@@ -40,10 +40,53 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/about', [PageController::class, 'about']);
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'about']);
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'about']);
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
+Route::get('/', function () {
+    echo "Hi, Selamat Datang";
+});
+
+Route::prefix('category') -> group(function () {
+    Route::get("/marbel-edu-games", function () {
+        echo "Selamat Datang di <br> Halaman Marbel Edu Games";
+    });
+    Route::get("/marbel-and-friends-kids-games", function () {
+        echo "Selamat Datang <br> Halaman Marbel and Friends Kids Games";
+    });
+    Route::get("/riri-story-books", function () {
+        echo "Selamat Datang <br> Halaman Riri Stroy Books";
+    });
+    Route::get("/kolak-kids-songs", function () {
+        echo "Selamat Datang <br> Halaman Kolak Kids Songs";
+    });
+});
+
+Route::prefix('news') -> group(function () {
+    Route::get("", function () {
+        echo "Halaman NEWS <br> Berisi berita";
+    });
+    Route::get("/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19", function () {
+        echo "Halaman Studio Berisi Berita <br> Berbagi Sembako Untuk Warga Sekitar Terdampak COVID-19";
+    });
+});
+
+Route::prefix('program') -> group(function () {
+    Route::get("/karir" , function () {
+        echo "Halaman Program Karir";
+    });
+    Route::get("/magang" , function () {
+        echo "Halaman Program Magang";
+    });
+    Route::get("/kunjungan-industri" , function () {
+        echo "Halaman Program Kunjungan Industri";
+    });
+});
+
+Route::get("/about-us" , function () {
+    echo "Nama : Rahma Nurwakhidatul Hasanah <br> Kelas : TI-2G <br> Nim : 2041720223";
+});
 
 
 
