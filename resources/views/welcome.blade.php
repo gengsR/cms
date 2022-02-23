@@ -23,7 +23,7 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
          RAHMA NURWAKHIDATUL HASANAH <br><br>
-         NIM : 2041720223, Kelas : D4TI-2G
+         NIM : 2041720223, Kelas : TI-2G
         </div>
         </div>
     </body>
