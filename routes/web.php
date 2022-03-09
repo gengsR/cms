@@ -96,8 +96,10 @@ use App\Http\Controllers\ArticleController;
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/home', function(){
-    return view('home');
-});
+// Route::get('/home', function(){
+//     return view('home');
+// });
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
