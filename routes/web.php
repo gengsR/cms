@@ -99,3 +99,5 @@ use App\Http\Controllers\ArticleController;
 Route::get('/home', function(){
     return view('home');
 });
+
+
